@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gesture Volume Control System</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1 class="title">Gesture Volume Control System</h1>
+<p class="subtitle">Real-time hand gesture recognition for volume control</p>
+
+<div class="container">
+
+    <!-- LEFT PANEL -->
+    <div class="left">
+        <h2>LIVE CAMERA FEED</h2>
+        <img id="video" src="/video_feed">
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="right">
+
+        <!-- Gesture Info -->
+        <div class="card">
+            <h2>GESTURE INFORMATION</h2>
+
+            <div class="gesture-row">
+                <div id="gesture-icon">✋</div>
+
+                <div>
+                    <h3 id="gesture-name">No Gesture</h3>
+                    <p id="gesture-desc">
+                        Show index and thumb fingers
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Volume -->
+        <div class="card">
+            <h2>VOLUME CONTROL</h2>
+
+            <div class="row">
+                <span>Current Volume</span>
+                <span id="volume-text" class="blue">50%</span>
+            </div>
+
+            <div class="vol-bar">
+                <div id="vol-fill"></div>
+            </div>
+        </div>
+
+        <!-- Quality -->
+        <div class="card">
+            <h2>GESTURE QUALITY</h2>
+
+            <div class="row">
+                <span>Detection Quality</span>
+                <span id="quality-text">Excellent</span>
+            </div>
+
+            <div class="bars">
+                <div class="bar" id="b1"></div>
+                <div class="bar" id="b2"></div>
+                <div class="bar" id="b3"></div>
+                <div class="bar" id="b4"></div>
+                <div class="bar" id="b5"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
+ 
