@@ -7,15 +7,14 @@ import time
 
 app = Flask(__name__)
 
-# ======== MediaPipe Setup ==========
+
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(min_detection_confidence=0.7, max_num_hands=1)
 mp_draw = mp.solutions.drawing_utils
 
-# ======== Camera ==========
 cap = cv2.VideoCapture(0)
 
-# ======== Shared State (used by UI) ==========
+
 state = {
     "volume": 50,
     "gesture": "No Gesture",
@@ -110,3 +109,4 @@ def status():
 if __name__ == "__main__":
     app.run(debug=True)
  
+
